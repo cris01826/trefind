@@ -1,0 +1,38 @@
+<mat-toolbar>
+  <span
+    >Hola <b>{{ user }}</b
+    >!! Bienvenid@ a <b>TREFIND</b></span
+  >
+
+  <input matInput type="text" />
+  <div class="search">
+    <mat-icon>search</mat-icon>
+  </div>
+</mat-toolbar>
+
+<div class="content">
+  <div class="boards">
+    <div class="grid">
+      <div class="col-8">
+          <div class="grid">
+              <div class="col-3" *ngFor="let board of boards">
+                <div class="board" >
+                    <p class="title">{{board.name}}</p>
+                    <div class="margin"></div>
+                    <p>description</p>
+                    <button mat-raised-button (click)="url(board.url)" color="primary">
+                      Entrar
+                    </button>
+                  </div>
+              </div>
+          </div>
+       
+      </div>
+      <div class="col-4">
+        <div class="like">
+          <p>Favoritos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,82 @@
+mat-toolbar {
+  background-color: coral;
+  color: #fff;
+  b {
+    font-weight: 500 !important;
+    color: yellow;
+  }
+  input {
+    margin-left: 40%;
+    background-color: #fff;
+    border: none;
+    width: 350px;
+    height: 28px;
+    outline: none;
+  }
+  .search {
+    float: right;
+    background-color: #000;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    mat-icon {
+      margin-top: 3px;
+    }
+  }
+}
+
+.content {
+  padding: 80px;
+  .boards {
+    background-color: #dadada;
+    padding: 10px;
+    display: table;
+    .board {
+      display: table-cell;
+      height: 100px;
+      max-height: 100px;
+      background-color: #26c2f9;
+      width: 150px;
+      padding: 10px;
+      box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1),
+        0px 1px 3px 0px rgba(0, 0, 0, 0.08) !important;
+      .margin {
+        height: 2px;
+        border-radius: 2px;
+        background-color: #ffffff;
+        width: 95%;
+        margin: auto;
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.08) !important;
+      }
+      .description {
+        margin: 5px;
+      }
+      .title {
+        font-size: 18px;
+        color: #ffffff;
+        font-weight: 500;
+        text-align: left;
+      }
+      button {
+        background-color: #000000 !important;
+        color: #026aa7 !important;
+        width: 100%;
+        text-transform: uppercase;
+      }
+    }
+    .like {
+      background-color: #000;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 18px;
+      text-align: center;
+      padding: 5px;
+      p {
+        margin: 5px;
+      }
+    }
+  }
+}

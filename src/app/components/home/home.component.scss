@@ -30,15 +30,17 @@ mat-toolbar {
 .content {
   padding: 80px;
   .boards {
+    width: 100%;
     background-color: #dadada;
     padding: 10px;
     display: table;
+
     .board {
       display: table-cell;
       height: 100px;
       max-height: 100px;
       background-color: #26c2f9;
-      width: 150px;
+      width: 160px;
       padding: 10px;
       box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1),
         0px 1px 3px 0px rgba(0, 0, 0, 0.08) !important;
@@ -65,6 +67,16 @@ mat-toolbar {
         color: #026aa7 !important;
         width: 100%;
         text-transform: uppercase;
+        text-align: center;
+        font-size: 11px;
+      }
+      .star{
+        margin-top: 5px;
+        cursor: pointer;
+        margin-right: 5px;
+      }
+      .star:hover{
+        color: yellow;
       }
     }
     .like {
@@ -78,5 +90,44 @@ mat-toolbar {
         margin: 5px;
       }
     }
+  }
+}
+
+.boardsStar {
+  background-color: blueviolet;
+  margin-top: 10px;
+  padding: 9px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1),
+  0px 1px 3px 0px rgba(0, 0, 0, 0.08) !important;
+  .margin {
+    height: 2px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    width: 95%;
+    margin: auto;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1),
+      0px 1px 3px 0px rgba(0, 0, 0, 0.08) !important;
+  }
+  button {
+    background-color: #000000 !important;
+    color: #026aa7 !important;
+    width: 100%;
+    text-transform: uppercase;
+  }
+  .title {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+  }
+  .name{
+    margin-top: 5px;
+    text-align: center;
+    color: yellow;
+    font-weight: 500;
+  }
+  .star{
+    margin-top: 5px;
+    cursor: pointer;
   }
 }

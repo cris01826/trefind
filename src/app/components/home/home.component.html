@@ -14,23 +14,56 @@
   <div class="boards">
     <div class="grid">
       <div class="col-8">
-          <div class="grid">
-              <div class="col-3" *ngFor="let board of boards">
-                <div class="board" >
-                    <p class="title">{{board.name}}</p>
-                    <div class="margin"></div>
-                    <p>description</p>
-                    <button mat-raised-button (click)="url(board.url)" color="primary">
-                      Entrar
-                    </button>
-                  </div>
+        <div class="grid">
+          <div class="col-3" *ngFor="let board of boards">
+            <div class="board">
+              <p class="title">{{ board.name }}</p>
+              <div class="margin"></div>
+              <p>{{ board.desc }}</p>
+              <div class="grid">
+                <div class="col-9">
+                  <button
+                    mat-raised-button
+                    (click)="url(board.url)"
+                    color="primary"
+                  >
+                    Visitar Tablero
+                  </button>
+                </div>
+                <div class="col-3" style="text-align: left;">
+                  <mat-icon (click)="createStar(board.id)" class="star"
+                    >star_border</mat-icon
+                  >
+                </div>
               </div>
+            </div>
           </div>
-       
+        </div>
       </div>
       <div class="col-4">
         <div class="like">
           <p>Favoritos</p>
+        </div>
+
+        <div class="boardsStar" *ngFor="let board of boardsStars">
+          <p class="title">A {{ user }} le gusta:</p>
+          <div class="margin"></div>
+          <p class="name">{{ board.name }}</p>
+
+          <div class="grid">
+            <div class="col-10">
+              <button
+                mat-raised-button
+                (click)="url(board.url)"
+                color="primary"
+              >
+                Visitar Tablero
+              </button>
+            </div>
+            <div class="col-2">
+              <mat-icon class="star" (click)="deleteStar(board.id)" >star</mat-icon>
+            </div>
+          </div>
         </div>
       </div>
     </div>
